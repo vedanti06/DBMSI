@@ -120,6 +120,9 @@ class IndexDriver extends TestDriver
 
   protected boolean test1()
   {
+
+    PCounter.initialize();
+
     System.out.println("------------------------ TEST 1 --------------------------");
     
     boolean status = OK;
@@ -328,8 +331,12 @@ class IndexDriver extends TestDriver
       status = FAIL;
       e.printStackTrace();
     }
+
+    System.out.println("Read: " + PCounter.rcounter);
+    System.out.println("Write: " + PCounter.wcounter);
     
     System.err.println("------------------- TEST 1 completed ---------------------\n");
+
     
     return status;
   }
@@ -337,6 +344,9 @@ class IndexDriver extends TestDriver
 
   protected boolean test2()
   {
+
+    PCounter.initialize();
+
     System.out.println("------------------------ TEST 2 --------------------------");
     
     boolean status = OK;
@@ -568,6 +578,9 @@ class IndexDriver extends TestDriver
       status = FAIL;
       e.printStackTrace();
     }
+
+    System.out.println("Read: " + PCounter.rcounter);
+    System.out.println("Write: " + PCounter.wcounter);
     
     System.err.println("------------------- TEST 2 completed ---------------------\n");
         
@@ -577,6 +590,8 @@ class IndexDriver extends TestDriver
 
   protected boolean test3()
   { 
+    PCounter.initialize();
+
     System.out.println("------------------------ TEST 3 --------------------------");
     
     boolean status = OK;
@@ -813,6 +828,9 @@ class IndexDriver extends TestDriver
       status = FAIL;
       e.printStackTrace();
     }
+     System.out.println("Read: " + PCounter.rcounter);
+    System.out.println("Write: " + PCounter.wcounter);
+
     
     System.err.println("------------------- TEST 3 completed ---------------------\n");
         

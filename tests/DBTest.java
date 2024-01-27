@@ -84,6 +84,7 @@ class DBDriver extends TestDriver implements GlobalConst {
   }
   
   protected boolean test1 () {
+    PCounter.initialize();
 
     SystemDefs sysdef = new SystemDefs( dbpath, 8193,  100, "Clock" );
 
@@ -194,11 +195,16 @@ class DBDriver extends TestDriver implements GlobalConst {
     
     if ( status == OK )
       System.out.print ("  Test 1 completed successfully.\n");
+
+      System.out.println("Read: " + PCounter.rcounter);
+      System.out.println("Write: " + PCounter.wcounter);
     
     return status;  
     
   }  
   protected boolean test2 () {
+
+    PCounter.initialize();
     
     System.out.print ("\n  Test 2 opens the database created in " +
 			"test 1 and does some further tests:\n");
@@ -289,11 +295,17 @@ class DBDriver extends TestDriver implements GlobalConst {
       System.err.print ("*** Error deallocating pages\n");
       e.printStackTrace();
     }
+
+    System.out.println("Read: " + PCounter.rcounter);
+    System.out.println("Write: " + PCounter.wcounter);
     
     return status; 
   }
 
   protected boolean test3 () {
+
+
+    PCounter.initialize();
 
     System.out.print ("\n  Test 3 tests for some error conditions:\n");
 
@@ -519,10 +531,17 @@ class DBDriver extends TestDriver implements GlobalConst {
     if ( status == OK )
       System.out.print ("  Test 3 completed successfully.\n");
 
+
+      System.out.println("Read: " + PCounter.rcounter);
+      System.out.println("Write: " + PCounter.wcounter);
+
+
     return status;
   }
   
   protected boolean test4 ()  {
+
+    PCounter.initialize();
     
     boolean status = OK;
     
@@ -856,7 +875,12 @@ class DBDriver extends TestDriver implements GlobalConst {
     
     if ( status == OK ) {
       System.out.print ("  Test 4 completed successfully.\n");
+
+
     }
+
+    System.out.println("Read: " + PCounter.rcounter);
+    System.out.println("Write: " + PCounter.wcounter);
     
     return status; 
   }

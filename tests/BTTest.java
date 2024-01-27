@@ -328,6 +328,8 @@ class BTDriver  implements GlobalConst
   void test1(int n) 
     throws Exception
     {
+      PCounter.initialize();
+
       try {
 	System.out.println(" ***************** The file name is: "+ "AAA"+postfix +"  **********");  
 	file=new BTreeFile("AAA"+postfix, keyType, 4, deleteFashion); 
@@ -349,6 +351,9 @@ class BTDriver  implements GlobalConst
       catch(Exception e) {
         throw e;
       }
+    System.out.println("Read: " + PCounter.rcounter);
+    System.out.println("Write: " + PCounter.wcounter);
+
       
       
     }
@@ -358,6 +363,7 @@ class BTDriver  implements GlobalConst
   void test2(int n) 
      throws Exception
   {
+    PCounter.initialize();
     try {
 
        System.out.println(" ***************** The file name is: "+ "AAA"+postfix +"  **********");  
@@ -380,6 +386,10 @@ class BTDriver  implements GlobalConst
      catch(Exception e) {
         throw e;
      }
+
+    System.out.println("Read: " + PCounter.rcounter);
+    System.out.println("Write: " + PCounter.wcounter);
+
   }
 
 
@@ -387,6 +397,7 @@ class BTDriver  implements GlobalConst
   void test3(int n) 
      throws Exception
   {
+    PCounter.initialize();
     try {
        System.out.println(" ***************** The file name is: "+ "AAA"+postfix +"  **********"); 
        file=new BTreeFile("AAA"+postfix, keyType, 4, deleteFashion); 
@@ -432,13 +443,18 @@ class BTDriver  implements GlobalConst
      catch(Exception e) {
          throw e;
      }
+    System.out.println("Read: " + PCounter.rcounter);
+    System.out.println("Write: " + PCounter.wcounter);
+
   }
 
 
 
   void test4(int n, int m) 
      throws Exception 
- {
+ { 
+  PCounter.initialize();
+   
     try {
        System.out.println(" ***************** The file name is: "+ "AAA"+postfix +"  **********"); 
        file=new BTreeFile("AAA"+postfix, keyType, 4, deleteFashion); 
@@ -513,6 +529,10 @@ class BTDriver  implements GlobalConst
      catch(Exception e) {
         throw e;
      }
+
+    System.out.println("Read: " + PCounter.rcounter);
+    System.out.println("Write: " + PCounter.wcounter);
+
   }
 
 
@@ -520,6 +540,8 @@ class BTDriver  implements GlobalConst
   void test5(int n, int m) 
      throws Exception
   {
+    PCounter.initialize();
+   
     try {
 
        System.out.println(" ***************** The file name is: "+ "AAA"+postfix +"  **********"); 
@@ -597,6 +619,10 @@ class BTDriver  implements GlobalConst
      catch(Exception e) {
         throw e;
      }
+
+    System.out.println("Read: " + PCounter.rcounter);
+    System.out.println("Write: " + PCounter.wcounter);
+
   }
 
 

@@ -92,6 +92,8 @@ public boolean runTests () {
   
   protected boolean test1 ()  {
 
+    PCounter.initialize();
+
     System.out.println ("\n  Test 1: Insert and scan fixed-size records\n");
     boolean status = OK;
     RID rid = new RID();
@@ -263,10 +265,16 @@ public boolean runTests () {
     if ( status == OK )
         System.out.println ("  Test 1 completed successfully.\n");
 
+
+        System.out.println("Read: " + PCounter.rcounter);
+        System.out.println("Write: " + PCounter.wcounter);
+
     return status; 
   }
   
   protected boolean test2 () {
+
+    PCounter.initialize();
 
     System.out.println ("\n  Test 2: Delete fixed-size records\n");
     boolean status = OK;
@@ -404,11 +412,21 @@ public boolean runTests () {
 
     if ( status == OK )
         System.out.println ("  Test 2 completed successfully.\n");
+
+
+        System.out.println("Read: " + PCounter.rcounter);
+        System.out.println("Write: " + PCounter.wcounter);
+
+
+
     return status; 
 
   }
 
   protected boolean test3 () {
+
+
+    PCounter.initialize();
 
     System.out.println ("\n  Test 3: Update fixed-size records\n");
     boolean status = OK;
@@ -590,6 +608,11 @@ public boolean runTests () {
     
     if ( status == OK )
       System.out.println ("  Test 3 completed successfully.\n");
+
+      System.out.println("Read: " + PCounter.rcounter);
+      System.out.println("Write: " + PCounter.wcounter);
+
+
     return status; 
     
   }
@@ -602,6 +625,8 @@ public boolean runTests () {
   
   
   protected boolean test4 () {
+
+    PCounter.initialize();
 
     System.out.println ("\n  Test 4: Test some error conditions\n");
     boolean status = OK;
@@ -764,6 +789,11 @@ public boolean runTests () {
     
     if ( status == OK )
       System.out.println ("  Test 4 completed successfully.\n");
+
+      System.out.println("Read: " + PCounter.rcounter);
+      System.out.println("Write: " + PCounter.wcounter);
+
+      
     return (status == OK);
   }
   

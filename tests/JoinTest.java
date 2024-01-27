@@ -527,6 +527,8 @@ class JoinsDriver implements GlobalConst {
   }
 
   public void Query1() {
+    PCounter.initialize();
+
     
     System.out.print("**********************Query1 strating *********************\n");
     boolean status = OK;
@@ -689,9 +691,16 @@ class JoinsDriver implements GlobalConst {
       System.err.println ("*** Error in closing ");
       Runtime.getRuntime().exit(1);
     }
+
+    System.out.println("Read: " + PCounter.rcounter);
+    System.out.println("Write: " + PCounter.wcounter);
+
   }
   
   public void Query2() {
+
+    PCounter.initialize();
+
     System.out.print("**********************Query2 strating *********************\n");
     boolean status = OK;
 
@@ -994,10 +1003,16 @@ class JoinsDriver implements GlobalConst {
    
       Runtime.getRuntime().exit(1);
       }
+
+      System.out.println("Read: " + PCounter.rcounter);
+      System.out.println("Write: " + PCounter.wcounter);
   }
   
 
    public void Query3() {
+
+    PCounter.initialize();
+
     System.out.print("**********************Query3 strating *********************\n"); 
     boolean status = OK;
 
@@ -1149,9 +1164,18 @@ class JoinsDriver implements GlobalConst {
       System.err.println ("*** Error setting up scan for sailors");
       Runtime.getRuntime().exit(1);
     }
+
+    System.out.println("Read: " + PCounter.rcounter);
+    System.out.println("Write: " + PCounter.wcounter);
+
+
   }
 
    public void Query4() {
+
+    PCounter.initialize();
+
+
      System.out.print("**********************Query4 strating *********************\n");
     boolean status = OK;
 
@@ -1315,9 +1339,17 @@ class JoinsDriver implements GlobalConst {
       System.err.println ("*** Error setting up scan for sailors");
       Runtime.getRuntime().exit(1);
     }
+
+    System.out.println("Read: " + PCounter.rcounter);
+    System.out.println("Write: " + PCounter.wcounter);
+
  }
 
    public void Query5() {
+
+    PCounter.initialize();
+
+
    System.out.print("**********************Query5 strating *********************\n");  
     boolean status = OK;
         // Sailors, Boats, Reserves Queries.
@@ -1472,10 +1504,17 @@ class JoinsDriver implements GlobalConst {
       System.err.println ("*** Error close for sortmerge");
       Runtime.getRuntime().exit(1);
     }
+
+    System.out.println("Read: " + PCounter.rcounter);
+    System.out.println("Write: " + PCounter.wcounter);
+
  }
 
   public void Query6()
     {
+
+      PCounter.initialize();
+
       System.out.print("**********************Query6 strating *********************\n");
       boolean status = OK;
       // Sailors, Boats, Reserves Queries.
@@ -1671,6 +1710,9 @@ class JoinsDriver implements GlobalConst {
 	
 	Runtime.getRuntime().exit(1);
       }
+
+      System.out.println("Read: " + PCounter.rcounter);
+      System.out.println("Write: " + PCounter.wcounter);
       
     }
   

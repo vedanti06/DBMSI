@@ -120,6 +120,9 @@ class SORTDriver extends TestDriver
 
   protected boolean test1()
   {
+
+    PCounter.initialize();
+
     System.out.println("------------------------ TEST 1 --------------------------");
     
     boolean status = OK;
@@ -273,6 +276,9 @@ class SORTDriver extends TestDriver
       status = FAIL;
       e.printStackTrace();
     }
+
+    System.out.println("Read: " + PCounter.rcounter);
+    System.out.println("Write: " + PCounter.wcounter);
     
     System.err.println("------------------- TEST 1 completed ---------------------\n");
     
@@ -282,6 +288,9 @@ class SORTDriver extends TestDriver
 
   protected boolean test2()
   {
+
+    PCounter.initialize();
+
     System.out.println("------------------------ TEST 2 --------------------------");
     
     boolean status = OK;
@@ -429,7 +438,8 @@ class SORTDriver extends TestDriver
       status = FAIL;
       e.printStackTrace();
     }
-    
+     System.out.println("Read: " + PCounter.rcounter);
+    System.out.println("Write: " + PCounter.wcounter);
     System.err.println("------------------- TEST 2 completed ---------------------\n");
         
     return status;
@@ -438,6 +448,9 @@ class SORTDriver extends TestDriver
 
   protected boolean test3()
   {
+
+    PCounter.initialize();
+
     System.out.println("------------------------ TEST 3 --------------------------");
     
     boolean status = OK;
@@ -723,6 +736,10 @@ class SORTDriver extends TestDriver
       e.printStackTrace();
     }
     
+    System.out.println("Read: " + PCounter.rcounter);
+    System.out.println("Write: " + PCounter.wcounter);
+
+
     System.err.println("------------------- TEST 3 completed ---------------------\n");
         
     return status;
@@ -730,6 +747,10 @@ class SORTDriver extends TestDriver
     
   protected boolean test4()
   {
+
+    PCounter.initialize();
+
+
     System.out.println("------------------------ TEST 4 --------------------------");
     
     boolean status = OK;
@@ -918,7 +939,8 @@ class SORTDriver extends TestDriver
       status = FAIL;
       e.printStackTrace();
     }
-    
+     System.out.println("Read: " + PCounter.rcounter);
+    System.out.println("Write: " + PCounter.wcounter);
     System.err.println("------------------- TEST 4 completed ---------------------\n");
     
     return status;
