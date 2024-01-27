@@ -608,6 +608,11 @@ class BMDriver extends TestDriver implements GlobalConst {
     if ( status == OK )
       System.out.print("  Test 3 completed successfully.\n");
 
+
+    
+      System.out.println("Read: " + PCounter.rcounter);
+      System.out.println("Write: " + PCounter.wcounter);
+
     return status;
 }
 
@@ -618,6 +623,10 @@ class BMDriver extends TestDriver implements GlobalConst {
    */
   protected boolean test4 () {
 
+    PCounter.initialize();
+    
+    System.out.println("Read: " + PCounter.rcounter);
+    System.out.println("Write: " + PCounter.wcounter);
 
     return true;
   }
@@ -628,6 +637,10 @@ class BMDriver extends TestDriver implements GlobalConst {
    * @return whether test5 has passed
    */
   protected boolean test5 () {
+    PCounter.initialize();
+    
+    System.out.println("Read: " + PCounter.rcounter);
+    System.out.println("Write: " + PCounter.wcounter);
 
     return true;
   }
@@ -638,6 +651,10 @@ class BMDriver extends TestDriver implements GlobalConst {
    * @return whether test6 has passed
    */
   protected boolean test6 () {
+    PCounter.initialize();
+    
+    System.out.println("Read: " + PCounter.rcounter);
+    System.out.println("Write: " + PCounter.wcounter);
 
     return true;
   }
